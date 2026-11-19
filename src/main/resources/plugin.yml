@@ -1,0 +1,39 @@
+name: TradePlugin
+version: '${project.version}'
+main: com.tradeplugin.TradePlugin
+api-version: '1.16'
+author: Jestron
+description: Oyuncular arası güvenli takas sistemi + takas geçmişi (1.16.5 - 1.21.x)
+
+commands:
+  trade:
+    description: Bir oyuncuya takas isteği gönder / toggle / reload
+    usage: /trade <oyuncu> | /trade toggle | /trade reload
+    aliases: [takas]
+  tradereply:
+    description: Takas isteğine yanıt ver (sohbet butonları otomatik çağırır)
+    usage: /tradereply accept|deny
+    permission: tradeplugin.trade
+  tradelog:
+    description: Takas geçmişini görüntüle
+    usage: /tradelog [oyuncu]
+    aliases: [takaslog, takasgecmisi]
+    permission: tradeplugin.tradelog
+
+permissions:
+  tradeplugin.trade:
+    description: /trade ile takas isteği gönderme
+    default: true
+  tradeplugin.toggle:
+    description: /trade toggle kullanma
+    default: true
+  tradeplugin.tradelog:
+    description: /tradelog kullanma
+    default: op
+  tradeplugin.admin:
+    description: /trade reload
+    default: op
+    children:
+      tradeplugin.trade: true
+      tradeplugin.toggle: true
+      tradeplugin.tradelog: true

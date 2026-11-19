@@ -1,0 +1,68 @@
+# ─────────────────────────────────────────────
+#  TradePlugin  —  Spigot / Paper / Purpur 1.16.5 - 1.21.x
+# ─────────────────────────────────────────────
+
+trade:
+  # Takas için maksimum mesafe (blok). 0 = sınırsız
+  max-distance: 15
+  # Farklı dünyalardaki oyuncular takas yapabilsin mi?
+  allow-cross-world: false
+  # İki taraf onayladıktan sonra geri sayım (saniye)
+  countdown-seconds: 5
+  # Takas isteğinin geçerlilik süresi (saniye)
+  request-timeout-seconds: 30
+
+# Renk kodu: &  |  Yer tutucular: {player} {distance} {seconds}
+messages:
+  prefix: "&8[&6Takas&8] "
+
+  only-players: "&cBu komutu sadece oyuncular kullanabilir."
+  no-permission: "&cBu komutu kullanma izniniz yok."
+  usage-trade: "&eKullanım: &f/trade <oyuncu> &7| &f/trade toggle"
+  usage-reply: "&eKullanım: &f/tradereply accept|deny"
+  reloaded: "&aConfig yeniden yüklendi."
+
+  player-not-found: "&cOyuncu bulunamadı: &e{player}"
+  self-trade: "&cKendine takas isteği gönderemezsin."
+  too-far: "&cOyuncu çok uzakta! Maksimum mesafe: &e{distance} &cblok."
+  different-world: "&cOyuncu farklı bir dünyada."
+  player-disabled: "&c{player} takas isteklerini kapatmış."
+  already-trading-self: "&cZaten bir takas yapıyorsun."
+  already-trading-other: "&c{player} şu an başka biriyle takas yapıyor."
+  already-pending: "&cBu oyuncuya zaten bekleyen bir istek var."
+
+  request-sent: "&a{player} &eadlı oyuncuya takas isteği gönderildi."
+  request-header: "  &6{player} &esana takas isteği gönderdi!"
+  request-accept-button: "&a&l[ ✔ Kabul Et ]"
+  request-accept-hover: "&aTakas isteğini kabul et"
+  request-deny-button: "&c&l[ ✘ Reddet ]"
+  request-deny-hover: "&cTakas isteğini reddet"
+  request-expired-sender: "&cTakas isteği zaman aşımına uğradı."
+  request-expired-target: "&cTakas isteğinin süresi doldu."
+  no-pending: "&cSana gönderilmiş bekleyen takas isteği yok."
+  requester-offline: "&cTakas isteği gönderen oyuncu artık çevrimdışı."
+  request-accepted-target: "&aTakas isteği kabul edildi!"
+  request-accepted-sender: "&a{player} takas isteğini kabul etti!"
+  request-denied-target: "&cTakas isteği reddedildi."
+  request-denied-sender: "&c{player} takas isteğini reddetti."
+  someone-trading: "&cTaraflardan biri zaten başka bir takas yapıyor."
+  moved-away: "&cOyuncu uzaklaştı, takas başlatılamadı."
+
+  toggle-enabled: "&aTakas istekleri &l✔ AÇIK&a."
+  toggle-disabled: "&cTakas istekleri &l✘ KAPALI&c."
+
+  accepted-self: "&aTakas onaylandı, karşı taraf bekleniyor..."
+  unaccepted-self: "&eOnayın geri alındı."
+  items-changed: "&eİtemler değişti, onaylar sıfırlandı."
+  countdown-start: "&eTakas &6{seconds} &esaniye içinde tamamlanacak!"
+  countdown-cancelled: "&eGeri sayım durduruldu, onaylar sıfırlandı."
+  offer-full: "&cTakas bölgen dolu!"
+
+  trade-completed: "&aTakas başarıyla tamamlandı!"
+  trade-cancelled-close: "&cTakas iptal edildi (menü kapatıldı)."
+  trade-cancelled-quit: "&c{player} sunucudan ayrıldı, takas iptal edildi."
+  trade-cancelled-shutdown: "&cSunucu/eklenti kapatıldı, takas iptal edildi."
+  trade-cancelled-offline: "&cKarşı taraf çevrimdışı, takas iptal edildi."
+
+  log-loading: "&eTakas geçmişi yükleniyor..."
+  log-not-found: "&cBu takas kaydı bulunamadı."
